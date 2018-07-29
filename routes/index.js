@@ -16,7 +16,7 @@ var upload = multer({ storage: storage });
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('index', { title: 'Baptême de Julia' });
+    res.render('index', { title: 'Baptême de Julia', successMsg: req.query.successMsg });
 });
 
 router.post('/', upload.array('imageupload'), function(req, res) {
