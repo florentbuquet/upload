@@ -2,10 +2,8 @@ extends layout
 
 block content
     h1= title
-    p Hello, voici une petite plateforme créée par nos soins afin que vous puissiez partager les photos prises lors
-    p du baptême de notre petite fille afin de compléter son album photo et bien sûr de lui montrer quand elle sera un
-    p peu plus grande :D
+    p= texte
     form(method='post', enctype='multipart/form-data')
-        input(type='file', name='imageupload', multiple)
-        input(type='submit', name='uploadimage', value='Upload Image')
+        input(type='file', name='imageupload', multiple, required)
+        input(type='submit', name='uploadimage', value='Envoyer chez Mél, Flo & Julia')
     p(style={color: 'green'})= successMsg
