@@ -20,6 +20,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+if (!fs.statSync('public/uploads'))
 fs.mkdirSync('public/uploads');
 
 app.use('/', indexRouter);
